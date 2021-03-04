@@ -1,0 +1,71 @@
+/**************** Login navbar *********************/
+
+.help-block {
+  font-size: 12px;
+}
+
+.bottom {
+  background-color: #ffffffcc !important;
+  border-top: 1px solid #ddd;
+  clear: both;
+  padding: 14px;
+  width: 100%;
+}
+
+.social-buttons {
+  margin: 12px 0;
+  text-align: center;
+}
+
+.social-buttons a {
+  width: 49%;
+  margin: 4px 2px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+#login-user {
+  text-align: center;
+  background-color: transparent !important;
+}
+
+.btn-fb {
+  color: #fff !important;
+  background-color: #3b5998 !important;
+}
+
+.btn-fb:hover {
+  background-color: #496ebc !important;
+}
+
+.btn-tw {
+  color: #fff !important;
+  background-color: #55acee !important;
+}
+
+.btn-tw:hover {
+  background-color: #59b5fa !important;
+}
+
+/*****************  Register New User Page Styles  ********************/
+.user-page {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #e5e5e5;
+}
+
+.user-form {
+  border: 2px solid #fff;
+  border-radius: 2%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 0 25px;
+}
+
+.user-form a {
+  text-decoration: none;
+}

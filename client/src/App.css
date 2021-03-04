@@ -1,0 +1,42 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #242526;
+  --bg-accent: #484a4d;
+  --text-color: #dadce1;
+  --nav-size: 60px;
+  --border: 1px solid #474a4d;
+  --border-radius: 8px;
+  --speed: 500ms;
+  margin: 0;
+  padding: 0;
+}
+/* Divider style */
+
+.feature_divider {
+  border-color: #515152;
+  position: relative;
+  margin-bottom: 1.1em 0;
+  width: 100%;
+  display: block;
+  border: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.feature_divider:after {
+  content: '';
+  display: block;
+  width: 114px;
+  height: 8px;
+  position: absolute;
+  bottom: -8px;
+  left: calc(50% - 57px);
+  background: #404041;
+}
