@@ -9,6 +9,7 @@ const ProductItem = ({ product }) => {
   const { isAuthenticated } = useContext(AuthContext);
 
   const { addToCard } = productContext;
+  // eslint-disable-next-line
   const { imgPath, title, desc, category, price, _id, qty } = product;
 
   const onClick = () => {

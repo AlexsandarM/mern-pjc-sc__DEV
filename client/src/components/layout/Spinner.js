@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import spinner from './spinner_modern.gif';
 
+// eslint-disable-next-line
 export default () => (
   <Fragment>
     <img

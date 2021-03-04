@@ -9,8 +9,8 @@ import RightNav from './RightNav';
 
 const Header = () => {
   return (
-    <>
-      <Navbar bg='dark' expand='lg' variant='dark'>
+    <Fragment>
+      <Navbar bg='dark' expand='lg' variant='dark' className='header__nav'>
         <Brand></Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
@@ -19,7 +19,7 @@ const Header = () => {
           <RightNav />
         </Navbar.Collapse>
       </Navbar>
-    </>
+    </Fragment>
   );
 };
 

@@ -18,6 +18,7 @@ const ShoppingCart = () => {
 
   useEffect(() => {
     loadProducts();
+    // eslint-disable-next-line
   }, []);
 
   if (!isAuthenticated) {
@@ -70,6 +71,7 @@ const ShoppingCart = () => {
                             style={{ width: '6rem', height: '4rem' }}
                             src={item.imgPath}
                             className='img-fluid'
+                            alt={item.title}
                           />
                         </div>
                         <div className=''>

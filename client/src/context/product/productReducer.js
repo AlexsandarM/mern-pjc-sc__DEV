@@ -12,6 +12,7 @@ import {
   PRODUCT_ERROR,
 } from '../types';
 
+// eslint-disable-next-line
 export default (state, action) => {
   switch (action.type) {
     case GET_PRODUCTS:
@@ -32,11 +33,11 @@ export default (state, action) => {
         cartItems: [action.payload, ...state.cartItems],
         loading: false,
       };
-    case DELETE_PRODUCT: 
-    return {
-      ...state,
-      cartItems: state.cartItems.filter(item => item._id !== action.payload)
-    }
+    case DELETE_PRODUCT:
+      return {
+        ...state,
+        cartItems: state.cartItems.filter(item => item._id !== action.payload),
+      };
     case PRODUCT_ERROR:
       return {
         ...state,
