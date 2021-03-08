@@ -13,6 +13,7 @@ import Products from './components/products/Products';
 import AuthState from './context/auth/AuthState';
 import AlertState from './context/alert/AlertState';
 import ProductState from './context/product/ProductState';
+import PrivateRoute from './components/routing/PrivateRoute';
 
 import setAuthToken from './utils/setAuthToken';
 import ShoppingCart from './components/shopping-cart/ShoppingCart';
@@ -32,7 +33,7 @@ function App() {
 
               <Switch>
                 <Route exact path='/' component={Home} />
-                <Route exact path='/account' component={Account} />
+                <PrivateRoute exact path='/account' component={Account} />
                 <Route exact path='/register' component={Register} />
                 <Route exact path='/login' component={Login} />
                 <Route exact path='/desktop' component={Products} />

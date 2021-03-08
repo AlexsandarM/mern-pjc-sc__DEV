@@ -6,6 +6,7 @@ const bcrypto = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 const auth = require('../middleware/auth');
+const passport = require('passport');
 
 // @route  GET api/auth
 // @disc   Get logged in user
@@ -72,6 +73,22 @@ router.post(
       res.status(500).send('Server Error');
     }
   }
+);
+
+// @route  GET api/auth/facebook
+// @disc   Get logged/register user with facebook
+// @access Private
+router.get(
+  '/facebook',
+  passport.authenticate('facebook', { scope: ['email'] })
+);
+
+router.get(
+  '/facebook/callback',
+  passport.authenticate('facebook', {
+    successRedirect: '/cart',
+    failureRedirect: '/',
+  })
 );
 
 module.exports = router;

@@ -43,6 +43,7 @@ const AuthState = props => {
       });
     }
   };
+
   // Register User
   const register = async formData => {
     const config = {
@@ -92,9 +93,12 @@ const AuthState = props => {
     }
   };
 
+  // Login User with Facebook
+  const loginFB = data => {console.log(data)};
+
   // Logout
   const logout = () => dispatch({ type: LOGOUT });
-  
+
   // Clear Errors
   const clearErrors = () => dispatch({ type: CLEAR_ERRORS });
 
@@ -111,6 +115,7 @@ const AuthState = props => {
         login,
         logout,
         clearErrors,
+        loginFB,
       }}
     >
       {props.children}

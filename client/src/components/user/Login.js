@@ -59,7 +59,7 @@ const Login = props => {
           <Col md={12}>
             <h6>Login via</h6>
             <div className='social-buttons'>
-              <Link to='#' className='btn btn-fb'>
+              <Link to='/auth/facebook' className='btn btn-fb'>
                 <i className='fa fa-facebook'></i> Facebook
               </Link>
               <Link to='#' className='btn btn-tw'>

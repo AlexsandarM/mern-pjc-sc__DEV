@@ -32,6 +32,8 @@
 }
 
 .btn-fb {
+  width: 49%;
+  margin: 4px 2px;
   color: #fff !important;
   background-color: #3b5998 !important;
 }

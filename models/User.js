@@ -18,6 +18,12 @@ const UserSchema = mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  facebook: {
+		id: String,
+		token: String,
+		email: String,
+		name: String
+	}
 });
 
 module.exports = mongoose.model('user', UserSchema);
