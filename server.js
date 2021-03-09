@@ -1,6 +1,7 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const path = require('path');
+const session = require('express-session');
 const passport = require('passport');
 
 const app = express();
@@ -8,10 +9,17 @@ const app = express();
 // Connect Database
 connectDB();
 
+// passport
 require('./config/passport')(passport);
 
 // Init Middleware former body-parser
 app.use(express.json({ extended: false }));
+
+app.use(
+  session({ secret: 'topSecret', saveUninitialized: true, resave: true })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Define Routes
 app.use('/api/users', require('./routes/users'));
@@ -19,7 +27,6 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/products', require('./routes/products'));
 app.use('/api/items', require('./routes/items'));
 // Additional Routes
-app.use(passport.initialize());
 require('./routes/routes.js')(app, passport);
 
 // Serve static assets in production
