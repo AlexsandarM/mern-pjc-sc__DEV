@@ -62,8 +62,8 @@ const Register = props => {
         <Col>
           <h6>Register via</h6>
           <Container fluid className='social-buttons'>
-            <Link to='#' className='btn btn-fb'>
-              <i className='fa fa-facebook'></i> Facebook
+            <Link to='/auth/google' className='btn btn-google'>
+              <i className='fa fa-google'></i> Google
             </Link>
             <Link to='#' className='btn btn-tw'>
               <i className='fa fa-twitter'></i> Twitter
