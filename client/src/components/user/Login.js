@@ -2,7 +2,8 @@ import React, { Fragment, useContext, useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './user.css';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
-import FacebookLogin from 'react-facebook-login';
+// import FacebookLogin from 'react-facebook-login';
+// import GoogleLogin from 'react-google-login';
 
 import AuthContext from '../../context/auth/authContext';
 import AlertContext from '../../context/alert/alertContext';
@@ -49,16 +50,21 @@ const Login = props => {
     }
   };
 
-  // Login with Social Networks
-  // Facebook
-  const componentClicked = data => {
-    // console.log('data', data);
-  };
+  // // Login with Social Networks
+  // // Facebook
+  // const componentClicked = data => {
+  //   // console.log('data', data);
+  // };
 
-  const responseFacebook = response => {
-    // console.log(response);
-    login({ email: response.email, password: '' });
-  };
+  // const responseFacebook = response => {
+  //   // console.log(response);
+  //   login({ email: response.email, password: '' });
+  // };
+  // // Google
+  // const responseGoogle = response => {
+  //   console.log(response);
+  //   // login({ email: response.email, password: '' });
+  // };
 
   return (
     <Fragment>
@@ -71,7 +77,7 @@ const Login = props => {
           <Col md={12}>
             <h6>Login via</h6>
             <div className='social-buttons'>
-              <FacebookLogin
+              {/* <FacebookLogin
                 appId='368837167423490'
                 autoLoad={false}
                 fields='name,email,picture'
@@ -81,9 +87,15 @@ const Login = props => {
                 cssClass='btn btn-fb'
                 icon='fa-facebook'
               />
-              <Link to='#' className='btn btn-tw'>
-                <i className='fa fa-twitter'></i> Twitter
-              </Link>
+              <GoogleLogin
+                clientId='23190583531-qtop514344qafn27kci10bnddvk9p41r.apps.googleusercontent.com'
+                buttonText=' Google'
+                className='btn btn-google'
+                icon={true}
+                onSuccess={responseGoogle}
+                onFailure={responseGoogle}
+                cookiePolicy={'single_host_origin'}
+              /> */}
             </div>
             <h6>or</h6>
             <Form className='form' id='login-form' onSubmit={onSubmit}>

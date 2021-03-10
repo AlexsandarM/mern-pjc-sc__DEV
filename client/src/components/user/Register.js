@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import './user.css';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 import FacebookLogin from 'react-facebook-login';
+import GoogleLogin from 'react-google-login';
 
 import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
@@ -68,6 +69,11 @@ const Register = props => {
     // loginFB({ token: response.accessToken });
     register({ name: response.name, email: response.email, password: '' });
   };
+  // Google
+  const responseGoogle = response => {
+    console.log(response);
+    register({ name: response.name, email: response.email, password: '' });
+  };
 
   return (
     <Container fluid className='user-page'>
@@ -86,9 +92,15 @@ const Register = props => {
               cssClass='btn btn-fb'
               icon='fa-facebook'
             />
-            <Link to='#' className='btn btn-tw'>
-              <i className='fa fa-twitter'></i> Twitter
-            </Link>
+            {/* <GoogleLogin
+              clientId='23190583531-qtop514344qafn27kci10bnddvk9p41r.apps.googleusercontent.com'
+              buttonText=' Google'
+              className='btn btn-google'
+              icon={true}
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+              cookiePolicy={'single_host_origin'}
+            /> */}
           </Container>
           <h6>or</h6>
           <Form className='form' id='register-form' onSubmit={onSubmit}>

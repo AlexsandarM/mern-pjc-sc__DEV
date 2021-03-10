@@ -42,6 +42,15 @@
   background-color: #496ebc !important;
 }
 
+.btn-google {
+  color: #444 !important;
+  background-color: #fff !important;
+}
+
+.btn-google:hover {
+  background-color: #ffffffcc !important;
+}
+
 .btn-tw {
   color: #fff !important;
   background-color: #55acee !important;
