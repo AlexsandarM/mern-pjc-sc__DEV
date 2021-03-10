@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './user.css';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
+import FacebookLogin from 'react-facebook-login';
 
 import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
@@ -55,6 +56,19 @@ const Register = props => {
     }
   };
 
+  // Register with Social Networks
+  // Facebook
+  const componentClicked = data => {
+    // console.log('data', data);
+  };
+
+  const responseFacebook = response => {
+    // console.log(response.accessToken)
+    console.log(response);
+    // loginFB({ token: response.accessToken });
+    register({ name: response.name, email: response.email, password: '' });
+  };
+
   return (
     <Container fluid className='user-page'>
       <h3 className='text-primary text-center p-2'>Register as New User</h3>
@@ -62,9 +76,16 @@ const Register = props => {
         <Col>
           <h6>Register via</h6>
           <Container fluid className='social-buttons'>
-            <Link to='#' className='btn btn-fb'>
-              <i className='fa fa-facebook'></i> Facebook
-            </Link>
+            <FacebookLogin
+              appId='368837167423490'
+              autoLoad={false}
+              fields='name,email,picture'
+              onClick={componentClicked}
+              callback={responseFacebook}
+              textButton=' Facebook'
+              cssClass='btn btn-fb'
+              icon='fa-facebook'
+            />
             <Link to='#' className='btn btn-tw'>
               <i className='fa fa-twitter'></i> Twitter
             </Link>

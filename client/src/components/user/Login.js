@@ -2,6 +2,7 @@ import React, { Fragment, useContext, useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './user.css';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
+import FacebookLogin from 'react-facebook-login';
 
 import AuthContext from '../../context/auth/authContext';
 import AlertContext from '../../context/alert/alertContext';
@@ -20,7 +21,7 @@ const Login = props => {
       history.push('/cart');
     }
 
-    if (error === 'Invalid Credentials') {
+    if (error === 'Invalid Credentials, Register First') {
       setAlert(error, 'danger');
       clearErrors();
     }
@@ -48,6 +49,17 @@ const Login = props => {
     }
   };
 
+  // Login with Social Networks
+  // Facebook
+  const componentClicked = data => {
+    // console.log('data', data);
+  };
+
+  const responseFacebook = response => {
+    // console.log(response);
+    login({ email: response.email, password: '' });
+  };
+
   return (
     <Fragment>
       <Container fluid className='user-page'>
@@ -59,9 +71,16 @@ const Login = props => {
           <Col md={12}>
             <h6>Login via</h6>
             <div className='social-buttons'>
-              <Link to='#' className='btn btn-fb'>
-                <i className='fa fa-facebook'></i> Facebook
-              </Link>
+              <FacebookLogin
+                appId='368837167423490'
+                autoLoad={false}
+                fields='name,email,picture'
+                onClick={componentClicked}
+                callback={responseFacebook}
+                textButton=' Facebook'
+                cssClass='btn btn-fb'
+                icon='fa-facebook'
+              />
               <Link to='#' className='btn btn-tw'>
                 <i className='fa fa-twitter'></i> Twitter
               </Link>
