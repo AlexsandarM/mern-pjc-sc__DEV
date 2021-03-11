@@ -1,4 +1,7 @@
 /**************************** MiddleNav styles ***********************/
+*:focus {
+  outline: 0 !important;
+}
 
 .dropdown-menu[aria-labelledby='basic-nav-dropdown'] a {
   text-decoration: none;
@@ -71,4 +74,43 @@
 
 .dropdown-menu-right li {
   text-align: center;
+}
+
+.nav__search:hover .dropdown-menu {
+  display: block !important;
+}
+
+.nav__search > .dropdown-menu {
+  top: 58px;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.nav__search > .dropdown-menu > .form-inline {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.nav__search > .dropdown-menu > .form-inline input {
+  color: #fff !important;
+  margin: 0 !important;
+  border-color: #fff;
+  box-shadow: 0 0 0 0 #fcfcfc;
+}
+.nav__search > .dropdown-menu > .form-inline button {
+  color: #007bff;
+  border: 1px solid #b3b0b0;
+}
+.nav__search .dropdown-toggle:after {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  #basic-navbar-nav
+    > div.nav__right.ml-auto.text-color.navbar-nav
+    > div.nav__search.nav-item.show.dropdown {
+    background-color: transparent !important;
+  }
 }

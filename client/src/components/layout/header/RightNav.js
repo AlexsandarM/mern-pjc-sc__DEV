@@ -62,17 +62,23 @@ const RightNav = () => {
   );
 
   return (
-    <Nav className='ml-auto text-color'>
-      <Form inline>
-        <FormControl
-          type='text'
-          placeholder='Search'
-          className='mr-sm-2 bg-dark'
-        />
-        <Button variant='outline-light'>
-          <i className='fas fa-search' />
-        </Button>
-      </Form>
+    <Nav className='nav__right ml-auto text-color'>
+      <NavDropdown
+        className='nav__search'
+        alignRight
+        title={
+          <span>
+            <i className='fas fa-search' />
+          </span>
+        }
+      >
+        <Form inline>
+          <FormControl type='text' placeholder='Search' className='bg-dark' />
+          {/* <Button variant='outline-dark'>
+            <i className='fas fa-search' />
+          </Button> */}
+        </Form>
+      </NavDropdown>
       <NavDropdown
         id='dropdown-button-shopping'
         title={
