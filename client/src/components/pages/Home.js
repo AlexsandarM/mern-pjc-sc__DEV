@@ -1,12 +1,29 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
+import ProductContext from '../../context/product/productContext';
 
 const imgPlaceHolder =
   'https://via.placeholder.com/1600x575.png?text=Product+Image';
+  
 
 const Home = () => {
+  const productContext = useContext(ProductContext);
+
+  const { filtered } = productContext;
+
   return (
     <Fragment>
+      {filtered?.length === 0 && (
+        <div
+          class='text-center alert alert-warning alert-dismissible fade show'
+          role='alert'
+        >
+          <strong>Holy guacamole!</strong> No product with that information!
+          <p>Search for products on <Link to='/desktop'>Products Page</Link></p>
+        </div>
+      )}
       <section>
         <Carousel>
           <Carousel.Item interval={1000}>

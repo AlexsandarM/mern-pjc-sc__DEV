@@ -6,7 +6,6 @@ import { transitions, positions, Provider as AlertProvider } from 'react-alert';
 // Components
 import Header from './components/layout/header/Header';
 import Home from './components/pages/Home';
-import Account from './components/pages/Account';
 import Register from './components/user/Register';
 import Login from './components/user/Login';
 import Products from './components/products/Products';
@@ -18,6 +17,7 @@ import ProductState from './context/product/ProductState';
 
 import setAuthToken from './utils/setAuthToken';
 import ShoppingCart from './components/shopping-cart/ShoppingCart';
+import Support from './components/pages/Support';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -46,7 +46,7 @@ function App() {
 
                 <Switch>
                   <Route exact path='/' component={Home} />
-                  <Route exact path='/account' component={Account} />
+                  <Route exact path='/support' component={Support} />
                   <Route exact path='/register' component={Register} />
                   <Route exact path='/login' component={Login} />
                   <Route exact path='/desktop' component={Products} />

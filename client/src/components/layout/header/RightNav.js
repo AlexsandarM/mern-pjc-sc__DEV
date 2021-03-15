@@ -1,18 +1,16 @@
-import React, { Fragment, useContext, useEffect } from 'react';
+import React, {
+  Fragment,
+  useContext,
+  useEffect,
+} from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
 // React Bootstrap Components
 // eslint-disable-next-line
-import {
-  Nav,
-  Form,
-  FormControl,
-  NavDropdown,
-  Dropdown,
-  Button,
-} from 'react-bootstrap';
+import { Nav, NavDropdown, Dropdown, Button } from 'react-bootstrap';
 // Custom components
 import ShoppingCart from '../../shopping-cart/ShoppingCart';
+import Search from './Search';
 
 import AuthContext from '../../../context/auth/authContext';
 
@@ -72,12 +70,7 @@ const RightNav = () => {
           </span>
         }
       >
-        <Form inline>
-          <FormControl type='text' placeholder='Search' className='bg-dark' />
-          {/* <Button variant='outline-dark'>
-            <i className='fas fa-search' />
-          </Button> */}
-        </Form>
+        <Search />
       </NavDropdown>
       <NavDropdown
         id='dropdown-button-shopping'

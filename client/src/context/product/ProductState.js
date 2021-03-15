@@ -108,6 +108,21 @@ const ProductState = props => {
     }
   };
 
+  // Filter Products Search bar
+  const filterProducts = text => {
+    dispatch({
+      type: FILTER_PRODUCTS,
+      payload: text,
+    });
+  };
+
+  // Clear Filter
+  const clearFilter = text => {
+    dispatch({
+      type: CLEAR_FILTER,
+    });
+  };
+
   return (
     <ProductContext.Provider
       value={{
@@ -120,6 +135,8 @@ const ProductState = props => {
         loadProducts,
         removeFromCart,
         getCartTotal,
+        filterProducts,
+        clearFilter
       }}
     >
       {props.children}

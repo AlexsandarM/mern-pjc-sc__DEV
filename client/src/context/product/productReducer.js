@@ -43,6 +43,23 @@ export default (state, action) => {
         ...state,
         error: action.payload,
       };
+    case FILTER_PRODUCTS:
+      return {
+        ...state,
+        filtered: state.products.filter(product => {
+          const regex = new RegExp(`${action.payload}`, 'gi');
+          return (
+            product.title.match(regex) ||
+            product.desc.match(regex) ||
+            product.price.toString().match(regex)
+          );
+        }),
+      };
+    case CLEAR_FILTER:
+      return {
+        ...state,
+        filtered: null,
+      };
     default:
       return state;
   }

@@ -3,9 +3,9 @@
   outline: 0 !important;
 }
 
-.dropdown-menu[aria-labelledby='basic-nav-dropdown'] a {
-  text-decoration: none;
-  color: var(--bg-accent);
+.header__nav {
+  margin: 0;
+  padding: 0 20px;
 }
 
 .text-color {
@@ -13,41 +13,33 @@
 }
 
 /* drop-down menu */
-.dropdown-menu[aria-labelledby='basic-nav-dropdown'] {
-  background-color: #ffffffcc !important;
-  opacity: 0.8;
+
+.dropdown-menu a:active,
+.dropdown-menu li:active {
+  background-color: #b3b0b0 !important;
 }
 
-.dropdown-item-megamenu li {
-  text-align: center;
-  padding: 0 5px;
+.dropdown-menu a {
+  text-decoration: none;
 }
 
-.dropdown-item-megamenu:hover,
-.dropdown-item-megamenu li {
-  background-color: transparent !important;
-  text-align: center;
+.megamenu_col {
+  text-align: center !important;
+}
+.megamenu_col a {
+  color: var(--bg-accent);
 }
 
 @media (min-width: 992px) {
-  .dropdown-menu[aria-labelledby='basic-nav-dropdown'] {
+  .dropdown-menu[aria-labelledby='megamenu'] {
     background-color: #ffffffcc !important;
     opacity: 9.5;
-    min-width: 800px !important;
-    position: absolute;
-    top: 58px;
-    transform: translateX(-35%);
-  }
-
-  .dropdown-menu-right[aria-labelledby='dropdown-button-user'] {
-    position: absolute;
-    top: 58px;
+    min-width: 50rem !important;
+    transform: translateX(-45%);
   }
 
   .dropdown-menu-right[aria-labelledby='dropdown-button-shopping'] {
-    min-width: 880px;
-    position: absolute;
-    top: 58px;
+    min-width: 40rem;
   }
 
   .dropdown-menu-right[aria-labelledby='dropdown-button-user'] li {
@@ -76,32 +68,32 @@
   text-align: center;
 }
 
+/* Search Bar */
+.filtered {
+  min-height: 465px;
+}
 .nav__search:hover .dropdown-menu {
   display: block !important;
 }
 
 .nav__search > .dropdown-menu {
-  top: 58px;
   padding: 0;
+  margin: 0;
   overflow: hidden;
   background-color: transparent;
 }
 
-.nav__search > .dropdown-menu > .form-inline {
+.nav__search > .dropdown-menu  {
   width: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
-.nav__search > .dropdown-menu > .form-inline input {
-  color: #fff !important;
+.nav__search > .dropdown-menu .serach__input {
   margin: 0 !important;
+  color: #fff !important;
   border-color: #fff;
   box-shadow: 0 0 0 0 #fcfcfc;
-}
-.nav__search > .dropdown-menu > .form-inline button {
-  color: #007bff;
-  border: 1px solid #b3b0b0;
 }
 .nav__search .dropdown-toggle:after {
   display: none;
