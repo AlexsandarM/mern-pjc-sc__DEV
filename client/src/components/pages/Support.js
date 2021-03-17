@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import { Container, Form } from 'react-bootstrap';
-import Alert from '../layout/Alerts';
 import './support.css';
 import axios from 'axios';
 import AlertContext from '../../context/alert/alertContext';
