@@ -26,7 +26,7 @@ router.post('/subscribe', (req, res) => {
       url: 'https://us7.api.mailchimp.com/3.0/lists/dab2cd2231',
       method: 'POST',
       headers: {
-        Authorization: 'auth 52843561d375feec7621be7ea42a701b-us7',
+        Authorization: 'auth auth MAILCHIMP_API',
       },
       body: postData,
     };
@@ -76,7 +76,7 @@ router.post('/support', (req, res) => {
       url: 'https://us7.api.mailchimp.com/3.0/lists/dab2cd2231',
       method: 'POST',
       headers: {
-        Authorization: 'auth 52843561d375feec7621be7ea42a701b-us7',
+        Authorization: 'auth MAILCHIMP_API',
       },
       body: postData,
     };
