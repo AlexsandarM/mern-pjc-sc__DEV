@@ -8,7 +8,6 @@ import GoogleLogin from 'react-google-login';
 import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
 // Custom Components
-import Alerts from '../layout/Alerts';
 
 const Register = props => {
   let history = useHistory();
@@ -159,7 +158,6 @@ const Register = props => {
                 Register
               </Button>
             </Form.Group>
-            <Alerts />
           </Form>
         </Col>
       </Row>

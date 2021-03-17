@@ -7,7 +7,6 @@ import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 
 import AuthContext from '../../context/auth/authContext';
 import AlertContext from '../../context/alert/alertContext';
-import Alerts from '../layout/Alerts';
 
 const Login = props => {
   let history = useHistory();
@@ -129,7 +128,6 @@ const Login = props => {
                   Sign in
                 </Button>
                 <hr />
-                <Alerts />
               </Form.Group>
             </Form>
           </Col>

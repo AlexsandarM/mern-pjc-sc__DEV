@@ -8,6 +8,7 @@ const app = express();
 connectDB();
 
 // Init Middleware former body-parser
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ extended: false }));
 
 // Define Routes
@@ -15,6 +16,8 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/products', require('./routes/products'));
 app.use('/api/items', require('./routes/items'));
+// Mailchimp Routes
+app.use('/mailchimp', require('./routes/mailchimp'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {

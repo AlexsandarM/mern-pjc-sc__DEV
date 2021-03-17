@@ -1,0 +1,135 @@
+/*
+  =========================================================================================
+                                    Social Icons
+  =========================================================================================
+  */
+
+.round-btn {
+  display: inline-flex;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 15px 8px;
+  box-shadow: 2px 2px 5px 0px rgb(82, 0, 67);
+  border: 1px solid;
+}
+.round-btn i {
+  display: block !important;
+  height: 24px;
+  width: 32px;
+  margin-top: 6px;
+  padding: 7px 12px;
+  font-size: 18px;
+  border-radius: 50%;
+}
+:hover.round-btn {
+  transform: scale(1.3, 1.3);
+}
+.btn-facebook i {
+  color: #3b5998;
+  padding: 8px 13px;
+}
+.btn-linkedin i {
+  color: #007bb6;
+}
+.btn-twitter i {
+  color: #1c9deb;
+}
+.btn-instagram i {
+  color: #dd3f5c;
+}
+.btn-whatsapp i {
+  color: #155e54;
+}
+.btn-envelop i {
+  color: #d6403a;
+  font-size: 15px;
+  padding: 9px 12px;
+}
+/*
+      =========================================================================================
+                                        footer
+      =========================================================================================
+*/
+
+.footer-wrap {
+  padding-top: 43px;
+  background-size: cover;
+}
+
+.footer-wrap h3 {
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.footer-wrap p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #b3b3b3;
+  margin-top: 15px;
+}
+
+.copyright {
+  border-top: 1px solid #111;
+  font-size: 14px;
+  color: #ccc;
+  padding-top: 15px;
+  text-align: center;
+  padding-bottom: 15px;
+  background: #222;
+}
+
+footer .first_class {
+  padding-bottom: 21px;
+}
+footer .first_class p,
+footer .first_class h3 {
+  margin: 0 0;
+}
+footer {
+  background: #333;
+}
+
+footer .newsletter input[type='email'] {
+  width: 100%;
+  background: #fff;
+  color: #333;
+  border: 1px solid #222;
+  padding: 14px 20px;
+  border-radius: 50px;
+  margin-top: 12px;
+  outline: none;
+}
+
+.newsletter .newsletter_submit_btn {
+  background: transparent;
+  position: absolute;
+  right: 30px;
+  border: 0;
+  top: 26px;
+  font-size: 17px;
+  color: #333;
+}
+
+footer .round-btn {
+  box-shadow: 2px 2px 5px 0px #222 !important;
+  margin: 15px 4px;
+}
+
+@media (max-width: 768px) {
+  .footer-wrap h3 {
+    margin-top: 27px;
+  }
+
+  footer .round-btn {
+    margin: 12px 3px;
+  }
+}
+@media (max-width: 320px) {
+  .copyright {
+    font-size: 13px;
+  }
+}

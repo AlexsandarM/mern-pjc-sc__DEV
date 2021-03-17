@@ -5,6 +5,7 @@ import { transitions, positions, Provider as AlertProvider } from 'react-alert';
 
 // Components
 import Header from './components/layout/header/Header';
+import Footer from './components/layout/footer/Footer';
 import Home from './components/pages/Home';
 import Register from './components/user/Register';
 import Login from './components/user/Login';
@@ -18,6 +19,7 @@ import ProductState from './context/product/ProductState';
 import setAuthToken from './utils/setAuthToken';
 import ShoppingCart from './components/shopping-cart/ShoppingCart';
 import Support from './components/pages/Support';
+import Alerts from './components/layout/Alerts';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -43,7 +45,7 @@ function App() {
             <Router>
               <Fragment>
                 <Header />
-
+                <Alerts />
                 <Switch>
                   <Route exact path='/' component={Home} />
                   <Route exact path='/support' component={Support} />
@@ -53,6 +55,7 @@ function App() {
                   <Route exact path='/laptop' component={Products} />
                   <Route exact path='/cart' component={ShoppingCart} />
                 </Switch>
+                <Footer />
               </Fragment>
             </Router>
           </AlertState>
